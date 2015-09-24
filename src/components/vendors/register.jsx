@@ -1,6 +1,4 @@
 import React from 'react'
-import { TextField } from 'material-ui'
-let ThemeManager = new (require('material-ui/lib/styles/theme-manager'))()
 
 const Register = React.createClass({
   render() {

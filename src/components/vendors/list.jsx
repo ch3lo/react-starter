@@ -1,20 +1,14 @@
 import React from 'react'
-import { TextField } from 'material-ui'
-let ThemeManager = new (require('material-ui/lib/styles/theme-manager'))()
 
 const List = React.createClass({
-  childContextTypes: {
-    muiTheme: React.PropTypes.object
-  },
-  getChildContext: function() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    };
-  },
   render() {
     return (<form><h3>List</h3>
-    <TextField hintText="Hint Text" floatingLabelText="My awsome company name" /><br />
-    <TextField hintText="Password Field" floatingLabelText="Use a strong pass" type="password" /><br />
+      <div className="row">
+        <div className="input-field col s6">
+          <input defaultValue="Alvin" id="first_name2" type="text" className="validate" />
+          <label className="active" htmlFor="first_name2">First Name</label>
+        </div>
+      </div>
     </form>)
   }
 })
